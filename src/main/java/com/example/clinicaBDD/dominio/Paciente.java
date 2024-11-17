@@ -20,7 +20,15 @@ public class Paciente {
         return this.historiaClinica.buscarDiagnostico(nombreDiagnostico);
     }
 
+    public boolean tieneDiagnostico(String nombreDiagnostico){
+        return this.historiaClinica.buscarDiagnostico(nombreDiagnostico).tieneNombre(nombreDiagnostico);
+    }
+
     public void agregarEvolucion(String diagnosticoElegido, Doctor doctor, String informe) {
         historiaClinica.agregarEvolucion(diagnosticoElegido,doctor,informe);
+    }
+
+    public void agregarDiagnostico(String nombreDiagnostico) {
+        historiaClinica.agregarDiagnostico(nombreDiagnostico);
     }
 }

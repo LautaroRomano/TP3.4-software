@@ -1,8 +1,6 @@
-Feature: Agregar una nueva evolución con diagnóstico previo.
+Feature: Crear un nuevo diagnóstico
 
-  Para que se pueda diagnosticar al paciente,
-  el médico
-  quiere añadir una nueva evolución en la historia clínica del paciente eligiendo un diagnóstico previo.
+  Como médico, quiero poder crear un nuevo diagnóstico en la historia clínica de un paciente.
 
   Background: El médico visualiza una historia clínica del paciente.
     Given el médico "Lautaro Romano" ha iniciado sesión
