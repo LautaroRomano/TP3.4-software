@@ -29,6 +29,10 @@ public class Paciente {
     }
 
     public void agregarDiagnostico(String nombreDiagnostico) {
+        if (nombreDiagnostico == null || nombreDiagnostico.isBlank()) {
+            throw new IllegalArgumentException("El diagnóstico no puede ser nulo o vacío.");
+        }
+
         historiaClinica.agregarDiagnostico(nombreDiagnostico);
     }
 }

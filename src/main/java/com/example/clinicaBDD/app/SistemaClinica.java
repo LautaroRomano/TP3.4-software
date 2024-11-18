@@ -21,6 +21,7 @@ public class SistemaClinica {
         Paciente paciente = repositorioPaciente
                 .buscarPaciente(dniPaciente)
                 .orElseThrow(() -> new RuntimeException("Paciente inexistente"));
+        if(informe.isBlank()) throw new IllegalArgumentException("El informe no puede estar vacío");
         paciente.agregarEvolucion(diagnosticoElegido,doctor,informe);
         repositorioPaciente.actualizarPaciente(paciente);
         return paciente;

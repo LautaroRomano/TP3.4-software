@@ -38,7 +38,6 @@ public class CrearUnDiagnosticoStepDefinitions {
 
     @And("selecciona el paciente {string}")
     public void seleccionaElPaciente(String dniPaciente) throws Exception {
-        System.out.printf("dniPaciente: "+dniPaciente);
         Paciente newPaciente = new Paciente("Felipe Rocha",dniPaciente, List.of("Angina"));
         when(repositorioPaciente.buscarPaciente(dniPaciente)).thenReturn(Optional.of(newPaciente));
 

@@ -28,6 +28,6 @@ public class RepositorioPaciente {
 
     public void cargarPacientes() {
         pacientes.put("43846366",new Paciente("Lautaro Romano","43846366", List.of("Angina")));
-        pacientes.put("12345678",new Paciente("Felipe Rocha","12345678", List.of("Angina")));
+        pacientes.put("43123456",new Paciente("Felipe Rocha", "43123456", List.of("Angina", "Gastritis", "Dengue")));
     }
 }
